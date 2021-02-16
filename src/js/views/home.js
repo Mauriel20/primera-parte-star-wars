@@ -66,11 +66,25 @@ export const Home = () => {
 		<div className="text-center mt-5">
 			{store.planets.length == 0 ? /*<p>No planets</p>*/ "" : ""}
 			<div className="w-100 people">
-				{store.planets.length == 0 ? "" : <h1 className="d-flex text-danger p4">Characters</h1>}
+				{store.planets.length == 0 ? (
+					""
+				) : (
+					<h1 className="d-flex text-danger p4">
+						Characters <img src="https://img.icons8.com/carbon-copy/100/000000/stormtrooper.png" />{" "}
+						<img src="https://img.icons8.com/color/48/000000/yoda.png" />{" "}
+						<img src="https://img.icons8.com/color/48/000000/chewbacca.png" />
+					</h1>
+				)}
 				<div className="d-inline-flex">{store.people.map(convertPeopleIntoHTML)}</div>
 			</div>
 			<div className="w-100 planets">
-				{store.planets.length == 0 ? "" : <h1 className="d-flex text-danger p4">Planets</h1>}
+				{store.planets.length == 0 ? (
+					""
+				) : (
+					<h1 className="d-flex text-danger p4">
+						Planets <img src="https://img.icons8.com/wired/64/000000/r2-d2.png" />{" "}
+					</h1>
+				)}
 				<div className="d-inline-flex">{store.planets.map(convertPlanetIntoHTML)}</div>
 			</div>
 		</div>
