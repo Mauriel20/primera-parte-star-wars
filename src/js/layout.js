@@ -21,7 +21,9 @@ export const Layout = () => {
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
-						<Navbar />
+						<div className="prueba">
+							<Navbar />
+						</div>
 						<Switch>
 							<Route exact path="/">
 								<Home />
